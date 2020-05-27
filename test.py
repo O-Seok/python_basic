@@ -18,7 +18,7 @@ class StackClassTest(unittest.TestCase):
         assert self.s.do_top() == 1
 
     def test_empty(self):
-        assert self.s.do_empty() == 1
+        self.assertEqual(self.s.do_empty(), 1)
 
     def test_pop(self):
         self.s.do_push(3)
@@ -39,9 +39,7 @@ class SeveralFunctionTest(unittest.TestCase):
 
     # sqrt 함수 테스트
     def test_sqrt(self):
-        self.assertLess(sqrt(5), 0)
-        self.assertEqual(sqrt(1), 0)
-
+        self.assertEqual(sqrt(1), 1)
 
 # Unittest를 위해 아래를 작성해줘야 한다.
 if __name__ == '__main__':
