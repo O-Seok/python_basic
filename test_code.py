@@ -30,17 +30,12 @@ class Stack:
 
     # pop
     def do_pop(self):
-        self.test_checked_pop()
         if self.stack == []:
             return -1
         else:
             pop_num = self.stack[len(self.stack) - 1]
             del self.stack[len(self.stack) - 1]
             return pop_num
-
-    def test_checked_pop(self):
-        assert self.stack == [], '비어있지 않다!!!'
-
 
 # n = int(input())
 # stack = Stack()
